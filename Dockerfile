@@ -1,5 +1,5 @@
-FROM openjdk:19-jdk
-WORKDIR /app
+FROM eclipse-temurin:19-jdk-alpine
+VOLUME /tmp
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 EXPOSE 8080
-COPY target/blog-api-app.jar blog-api-app.jar
-ENTRYPOINT ["java","-jar","/blog-api-app.jar"]
