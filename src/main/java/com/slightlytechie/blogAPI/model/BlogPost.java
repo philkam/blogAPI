@@ -1,6 +1,7 @@
 package com.slightlytechie.blogAPI.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,10 +14,10 @@ import java.util.Date;
 @ToString
 @Entity
 @Table(name = "blog_post")
-public class Blog {
+public class BlogPost {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "blog_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "blog_seq")
     @Column(name = "blog_post_id")
     private Long blogPostId;
 
@@ -39,22 +40,28 @@ public class Blog {
     private BlogPostStatus blogPostStatus;
 
     @Column(name = "blog_post_created_at")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Date blogPostCreatedAt;
 
     @Column(name = "blog_post_created_by")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String blogPostCreatedBy;
 
     @Column(name = "blog_post_modified_by")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String blogPostModifiedBy;
 
     @Column(name = "blog_post_modified_at")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Date blogPostModifiedAt;
 
     @Column(name = "blog_post_deleted_by")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String blogPostDeletedBy;
 
     @Column(name = "blog_post_deleted_at")
-    private String blogPostDeletedAt;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Date blogPostDeletedAt;
 
 
 

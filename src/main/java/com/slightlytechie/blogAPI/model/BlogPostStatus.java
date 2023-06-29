@@ -6,5 +6,5 @@ public enum BlogPostStatus {
 
     Published,
 
-    Archived
+    Archive
 }
