@@ -61,6 +61,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>blog-api-app</finalName>
+
 	</build>
 
 </project>
