@@ -1,7 +1,8 @@
 # blogAPI
 
 Deployed at:
-blogapi-production-ffe5.up.railway.app
+[blogapi](https://blogapi-production-ffe5.up.railway.app/swagger-ui/index.html)
+
 
 Documentation at
-[blogapi-production-ffe5.up.railway.app/sw](https://blogapi-production-ffe5.up.railway.app/swagger-ui/index.html)API documentation
+[API documentation](https://blogapi-production-ffe5.up.railway.app/swagger-ui/index.html)
